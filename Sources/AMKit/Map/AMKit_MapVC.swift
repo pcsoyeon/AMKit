@@ -8,7 +8,7 @@
 import UIKit
 
 /// AMKit Map 화면
-final class AMKit_MapVC: UIViewController {
+public class AMKit_MapVC: UIViewController {
     
     // MARK: - Views
     /// Map View
@@ -35,7 +35,7 @@ final class AMKit_MapVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
