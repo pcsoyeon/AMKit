@@ -2,10 +2,14 @@ import UIKit
 
 open class AMKit {
     
+    public init() {
+        
+    }
+    
     /// Text 출력
     /// - Parameters :
     ///  - text : custom text
-    static public func printText(text: String?) {
+    public func printText(text: String?) {
         print(text)
     }
     
