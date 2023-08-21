@@ -20,8 +20,8 @@ public class AMKit_MapVC: UIViewController {
     
     // MARK: - Properties
     
-    private var lat: Double
-    private var lng: Double
+    public var lat: Double
+    public var lng: Double
     
     // MARK: - Initializer
     
