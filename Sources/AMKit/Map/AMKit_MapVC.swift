@@ -25,15 +25,15 @@ public class AMKit_MapVC: UIViewController {
     
     // MARK: - Initializer
     
-    init(lat: Double, lng: Double) {
-        self.lat = lat
-        self.lng = lng
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    public init(lat: Double, lng: Double) {
+//        self.lat = lat
+//        self.lng = lng
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
