@@ -1,6 +1,6 @@
 import UIKit
 
-public class AMKit {
+open class AMKit {
     
     /// Text 출력
     /// - Parameters :
