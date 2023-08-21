@@ -1,6 +1,6 @@
 import UIKit
 
-open class AMKit {
+public struct AMKit {
     
     public init() {
         
@@ -9,7 +9,7 @@ open class AMKit {
     /// Text 출력
     /// - Parameters :
     ///  - text : custom text
-    public func printText(text: String?) {
+    public static func printText(text: String?) {
         print(text)
     }
     
