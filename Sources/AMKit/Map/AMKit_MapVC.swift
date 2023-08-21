@@ -14,8 +14,15 @@ public class AMKit_MapVC: UIViewController {
     /// Map View
     private lazy var mapView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .cyan
         return view
+    }()
+    
+    private lazy var nextButton: AMKit_PlainButton = {
+        let button = AMKit_PlainButton(activeBackgroundColor: .systemPink)
+        button.isDisabled = false
+        button.title = "MAP VIEW NEXT BUTTON"
+        return button
     }()
     
     // MARK: - Properties
@@ -47,16 +54,26 @@ public class AMKit_MapVC: UIViewController {
 extension AMKit_MapVC {
     
     private func configureUI() {
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemGray6
         
         view.addSubview(mapView)
+        view.addSubview(nextButton)
         
         mapView.translatesAutoresizingMaskIntoConstraints = false
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
-            mapView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 120),
+            // map view layout
+            mapView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             mapView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
             mapView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
-            mapView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            mapView.bottomAnchor.constraint(equalTo: nextButton.topAnchor),
+            
+            // next button layout
+            nextButton.heightAnchor.constraint(equalToConstant: 80),
+            nextButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            nextButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
     

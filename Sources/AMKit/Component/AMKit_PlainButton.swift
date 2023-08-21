@@ -23,10 +23,13 @@ public class AMKit_PlainButton: UIButton {
             setupColor()
         }
     }
+    
+    public var activeBackgroundColor: UIColor
 
     // MARK: - Initialize
     
-    public init() {
+    public init(activeBackgroundColor: UIColor) {
+        self.activeBackgroundColor = activeBackgroundColor
         super.init(frame: .zero)
         setupUI()
         setupLayout()
@@ -53,10 +56,6 @@ public class AMKit_PlainButton: UIButton {
     }
     
     private func setupColor() {
-        backgroundColor = .lightGray
-        
-        if isDisabled {
-            backgroundColor = .darkGray
-        }
+        backgroundColor = isDisabled ? .lightGray : activeBackgroundColor
     }
 }
