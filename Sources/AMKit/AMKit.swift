@@ -1,6 +1,12 @@
-public struct AMKit {
-    public private(set) var text = "Hello, World!"
+import UIKit
 
-    public init() {
+public class AMKit {
+    
+    /// Text 출력
+    /// - Parameters :
+    ///  - text : custom text
+    public func printText(text: String?) {
+        print(text)
     }
+    
 }
